@@ -10,13 +10,16 @@ class Post extends Model
     use HasFactory;
     
     /**
-     * comments
+     * Mendefinisikan relasi One to Many dengan model Comment.
+     * 
+     * Satu post dapat memiliki banyak komentar.
      *
-     * @return void
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function comments()
     {
-        // membuat relasi many ke dalam model commment atau table comment
+        // Membuat relasi One to Many ke model Comment
+        // Artinya, satu post dapat memiliki banyak komentar
         return $this->hasMany(Comment::class);
     }
 }
