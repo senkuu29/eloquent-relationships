@@ -1,0 +1,60 @@
+/* Mengatur tampilan latar belakang dengan gradasi warna */
+body {
+    background: linear-gradient(to right, #141E30, #243B55);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Mengatur tampilan kartu */
+.card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Menambahkan efek gambar di atas kartu */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: url('/mnt/data/IMG_20240601_163914 - Copy.jpg') no-repeat center center/cover;
+    opacity: 0.8;
+}
+
+/* Mengatur warna latar belakang dan teks header tabel */
+.table thead th {
+    background-color: #ff5733;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Mengatur warna latar belakang baris genap dalam tabel */
+.table tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Mengatur tampilan link nama pengguna */
+h3 a {
+    font-size: 26px;
+    color: #ffcc00;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+}
+
+/* Mengatur tampilan badge */
+.badge {
+    font-size: 14px;
+    padding: 7px 12px;
+    background: linear-gradient(45deg, #ff5733, #ffcc00);
+    color: #000;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
